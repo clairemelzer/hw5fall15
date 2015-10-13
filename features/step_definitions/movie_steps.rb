@@ -1,4 +1,4 @@
-# Completed step definitions for basic features: AddMovie, ViewDetails, EditMovie 
+
 
 Given /^I am on the RottenPotatoes home page$/ do
   visit movies_path
@@ -39,13 +39,6 @@ Given /^I am on the RottenPotatoes home page$/ do
  end
 
 
-
-
-# New step definitions to be completed for HW5. 
-# Note that you may need to add additional step definitions beyond these
-
-
-# Add a declarative step here for populating the DB with movies.
 
 Given /the following movies have been added to RottenPotatoes:/ do |movies_table|
   movies_table.hashes.each do |movie|
