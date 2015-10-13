@@ -60,14 +60,10 @@ end
 
 
 Then /^I should see all of the movies$/ do
-  movies = Movie.all
-    if movies.size == 20
-    movies.each do |movie|
-      assert page.body =~ /#{movie.title}/m, "#{movie.title} did not appear"
-    end
-  else
-    false
-  end
+    movies = Movie.all
+  
+    rows = page.body.scan(/<tr>/).length
+    rows.size == movies.size
 end
 
 
